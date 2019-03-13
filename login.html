@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>登录页面</title>
+	<meta charset="utf-8">
+	<meta name="" content="">
+	<meta name="" content="">
+	<link rel="stylesheet" href="css/login.css" type="text/css">
+</head>
+<body>
+	<!-- 主题页面 -->
+	<div class="wrap bg1"></div>
+	<div class="wrap bg2 "></div>
+	<div class="wrap bg3"></div>
+	<div class="wrap bg4"></div>
+	<!-- 主题导航侧栏 -->
+		<div class="switchBar">
+			<ul>
+				<li class="list"></li>
+				<li class="list"></li>
+				<li class="list"></li>
+				<li class="list"></li>
+			</ul>
+		</div>
+
+	<!-- 登录页面 -->
+	<div class="login">
+			<div class="top">
+				<form action="display.html" method="">
+					<input type="text" class="text user" placeholder="请输入用户名" onFocus="this.placeholder = '';" onBlur="if (this.placeholder == '') {this.placeholder = '请输入用户名';}" >
+
+					<input type="password" class="text pwd" placeholder="请输入密码" onFocus="this.placeholder = '';" onBlur="if (this.placeholder == '') {this.placeholder = '请输入密码';}" >
+
+					<input type="text" class="text verify" placeholder="在这里填入验证码" onFocus="this.placeholder = '';" onBlur="if (this.placeholder == ''){this.placeholder = '在这里填入验证码'}" >
+
+					<input type="text" class="text">
+
+					<input type="submit" value="">
+				</form>
+				<div class="tip">
+						<p class="left"><a href="#">Forgot password ?</p>
+						<p class="right"><a href="#">New here ? Sign Up</p>
+				</div>
+			</div>
+			<div class="bottom">
+					<p class="words">选择第三方登录方式</p>
+					<a href="#"><img src="images/qqlogin.png"></a>
+					<a href="#"><img src="images/weixin.png"></a>
+			</div>
+		</div>
+		<script src="js/jquery-1.11.1.min.js"></script>
+		<script>
+			// 侧边栏的显示与隐藏
+			var bar = document.querySelector(".switchBar");
+			var lg =document.querySelector(".login")
+			document.onmouseenter=function(event){
+				bar.style.transform="translatex("+0+"px)";
+				document.onmouseleave=function(event){
+					bar.style.transform="translatex("+-150+"px)";
+				}
+				lg.onmouseenter=function(){
+					bar.style.transform="translatex("+-150+"px)";
+					lg.onmouseleave=function(){
+					bar.style.transform="translatex("+0+"px)";
+				}
+			}		
+		}
+		// 背景切换
+			var li = $(".list");
+        	li.click(function(){
+            	var index = $(this).index();
+            	$(".wrap").eq(index).fadeIn().siblings(".wrap").fadeOut(); 
+		})	
+		</script>
+</body>
+</html>

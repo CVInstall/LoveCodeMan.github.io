@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>川菜</title>
+	<meta charset="utf-8">
+	<meta name="">
+	<meta name="">
+	<!-- <link rel="stylesheet" href="css/display-list.css" type="text/css" /> -->
+    <style type="text/css">
+.listcon{
+	float: left;
+	width: 220px;
+	height: 200px;
+	margin-right: 20px;
+	margin-bottom: 28px;
+	cursor: pointer;
+	border-radius: 10px;
+	box-shadow: 0px 10px 5px rgba(0,0,0,0.5);
+}
+.listcon-topic{
+	position: relative;
+	width: 220px;
+    height: 157px;
+	overflow: hidden;
+}
+.listcon-topic::before{
+	position: absolute;
+	top: 0;
+	left: 50%;
+	content: "";
+	width: 0;
+	height: 157px;
+	opacity: 0;
+	transition: 0.7s;
+	background-color: rgba(0,0,0,0.5);
+}
+.listcon-topic:hover:before{
+	width: 220px;
+	left: 0;
+    opacity: 1;
+}
+.listcon-topic:hover .info{
+    opacity: 1;
+    transition-delay: 0.5s;
+}
+/* 遮罩层信息 */
+.info{
+	list-style: none;
+	color: #faff72;
+	text-shadow: 5px 0 2px #f60;
+	text-align: center;
+	transition: all 0.7s ease 0s;
+	opacity: 0;
+}
+.title{
+    position: absolute;
+	top: 50%;
+	left: 50%;
+	width: 220px;
+	transform: translateX(-50%) translateY(-50%);
+	font-size: 26px;
+	font-weight: bold;
+}
+.price{
+    position: absolute;
+	top: 91%;
+	left: 50%;
+	width: 220px;
+	transform: translateX(-50%) translateY(-50%);
+	font-size: 20px;
+}
+/* 按钮样式 */
+.buttom{
+	width: 220px;
+	height: 43px;
+	font-size:22px;
+	font-family: 楷体;
+	text-align: center;
+	line-height: 43px;
+	color: #fff;
+	font-weight: bold;
+	cursor: pointer;
+	background: #f9906f;
+	box-shadow:inset 0 0 5px rgba(0,0,0,0.5);
+	transition: 0.5s;
+}
+.buttom:hover{	
+	background: #bf2610;
+}
+.buttom:active{
+	color: #ffc773;
+	box-shadow: inset 0 0 30px rgba(0,0,0,0.5);
+}
+    </style>
+</head>
+<body>
+		<!--No.1-->
+		<div class="listcon">
+			<div class="listcon-topic">
+                <img src="images/menu/chuanCai/01.png">
+				<div class="info">
+					<div class="title">小葱拌豆腐</div>
+					<div class="price">RMB:14元</div>
+				</div>
+			</div>
+			<div class="buttom">来一个！</div>
+		</div>
+</body>
+</html>
+

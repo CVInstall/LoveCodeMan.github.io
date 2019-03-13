@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>点餐页面</title>
+	<meta charset="utf-8">
+	<meta name="Keywords" content="">
+	<meta name="Discription" content="">
+	<link rel="stylesheet" href="css/display.css" type="text/css">
+</head>
+
+<body>
+	<!--头部-->
+	<div class="header">
+		<!--Logo-->
+		<div class="logo">
+			<img src="images/logo.png" width="184" height="80" alt="logo" />
+		</div>
+		<!--配送地址栏-->
+		<div class="nav">
+			<div class="address">上海
+				<div class="choose">
+					<p>请选择您要配送到的城市： </p>
+					<ul>
+						<li>上海</li>
+						<li>北京</li>
+						<li>天津</li>
+						<li>杭州</li>
+						<li>无锡</li>
+						<li>苏州</li>
+						<li>广州</li>
+						<li>深圳</li>
+					</ul>
+				</div>
+			</div>
+			<!--左侧导航栏-->
+			<ul>
+				<li><a href="#">首页</a></li>
+				<li><a href="#">蛋糕</a></li>
+				<li><a href="#">新品</a></li>
+				<li><a href="#">品牌故事</a></li>
+				<li><a href="#">订购帮助</a></li>
+			</ul>
+		</div>
+		<!--右侧导航栏-->
+		<div class="login">
+			<ul>
+				<li><a href="#">APP下载</a></li>
+				<li><a href="#">登录</a></li>
+				<li><a href="#">注册</a></li>
+				<li><a href="#">订单</a></li>
+				<li class="icon">0</li>
+			</ul>
+		</div>
+	</div>
+
+	<!--中间展示部分-->
+<div class="display">
+	<!--左边列表-->
+	<div id="menu-list">
+		<div class="menutitle">菜&nbsp;&nbsp;单</div>
+		<div class="nav">
+			<ul>
+				<li class="nav-list">
+					<h2>餐桌管理
+						<i></i>
+					</h2>
+					<div class="hide">
+						<h5><a href="table.html" target="myIframe">新增餐桌</a></h5>
+						<h5><a href="#">查询餐桌</a></h5>
+						<h5><a href="#">编辑餐桌</a></h5>
+					</div>
+				</li>
+
+				<li class="nav-list">
+					<h2>菜品管理
+						<i></i>
+					</h2>
+					<div class="hide">
+						<h5><a href="chuanCai.html" target="myIframe" name="chuan">川菜</a></h5>
+						<h5><a href="yueCai.html" target="myIframe">粤菜</a></h5>
+						<h5><a href="xiangCai.html" target="myIframe">湘菜</a></h5>
+					</div>
+				</li>
+
+				<li class="nav-list">
+					<h2>订餐管理
+						<i></i>
+					</h2>
+					<div class="hide">
+						<h5><a href="total.html" target="myIframe">结账</a></h5>
+					</div>
+				</li>
+			</ul>
+		</div>
+
+	</div>
+
+	<!--展示界面-->
+	<div id="menu-display">
+		<iframe name="myIframe">sadasdasdasdasdasdas</iframe>
+	</div>
+
+	<div class="clearfloat"></div>
+
+</div>
+	<!--清除浮动-->
+	<div class="clearfloat"></div>
+
+	<!--页面底部-->
+	<div id="footer">
+		<div class="tel">
+			<p> 订购专线：<a href="#">400 650 2121</a>（服务时间 08:00–22:00）</p>
+			<p> 客服电话：<a href="#">021-23099721</a>（全国） | <a href="#">OnlineOrder@163.com</a>（邮箱）
+				<a href="#"><img src="images/weibo.png" /></a>
+				<a href="#"><img src="images/weixin.png" /></a>
+				<a href="#"><img src="images/pic.gif" /></a>
+			</p>
+		</div>
+
+		<div class="footer-txt">
+			<p><strong>北京/上海/杭州/广州：餐桌请提前1小时预订；天津/苏州/无锡/深圳：餐桌请提前30分钟预订 </strong>（当日22点以后订单，于次日8点开始审核）</p>
+			<p> <strong>当日配送,截止下单时间：北京/上海：16:50；杭州/广州：13:50；天津/苏州/无锡/深圳：11:00 </strong></p>
+			<p><span>Copyright© OnlineOrder在线订单 2007-2015, 版权所有 京ICP备14006254号-1 公司: 重庆****有限公司 地址: 重庆南岸***** 电话: </span><a href="#">021-54833405</a>
+			</p>
+		</div>
+
+		<ul class="footer-nav">
+			<li> 联系我们 | </li>
+			<li> 订购帮助 | </li>
+			<li> 企业合作 | </li>
+		</ul>
+	</div>
+
+	<script type="text/javascript">
+		var aList = document.querySelectorAll('.nav h2');
+		var aHide = document.querySelectorAll('.hide');
+		var aIcon = document.querySelectorAll('.nav i');
+		var lastIndex = 0;
+		for (var i = 0; i < aList.length; i++) {
+			aList[i].index = i;
+			aList[i].onclick = function () {
+				
+				aList[this.index].className = 'on';
+				aHide[this.index].style.height = '200px';
+				aIcon[this.index].className = 'on';
+				
+			aList[this.index].onclick=function(){
+				if(aList[this.index].className == ''){
+					aList[this.index].className = 'on';
+					aHide[this.index].style.height = '200px';
+					aIcon[this.index].className = 'on';
+				}
+				else{
+					aList[this.index].className='';
+					aHide[this.index].style.height='0';
+					aIcon[this.index].className = '';
+				}	
+			}
+		}
+	}
+	</script>
+</body>
+</html>

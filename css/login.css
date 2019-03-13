@@ -1,0 +1,197 @@
+/* 背景图片层 */
+*{
+	margin: 0;
+	padding: 0;
+}
+html,body{
+	height: 100%;
+}
+body{
+	position: relative;		
+}
+.wrap{		
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 100%;
+	width: 100%;
+	background-size: 100% 100%;
+}
+.wrap:nth-child(1){
+	background-image: url("../images/themes/1.jpg");
+}
+.wrap:nth-child(2){
+	background-image: url("../images/themes/2.jpg");
+}
+.wrap:nth-child(3){
+	background-image: url("../images/themes/3.jpg");
+}
+.wrap:nth-child(4){
+	background-image: url("../images/themes/4.jpg");
+}
+/* 登录框 */
+.login{
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	width: 500px;
+	height: 450px;
+	transform: translateX(-50%) translateY(-50%);
+	background: rgba(0,0,0,0.3);
+	border: 1px dotted #666;
+	border-radius: 20px;
+	box-shadow: inset 0 0 5px rgba(248,248,255,0.3);
+}
+.top{
+	width:500px; 
+	height:380px;
+	border-bottom: 2px solid #eedeb0;
+	text-align: center;
+}
+.user{
+	background-image: url('../images/zhanghao.jpg');
+}
+.pwd{
+	background-image: url('../images/mima.jpg');
+}
+.verify{
+	background-image: url("../images/mima.jpg");
+}
+.text{
+	/* display: block; */
+	width: 300px;
+	height: 50px;
+	margin: 30px auto 0 auto;
+	border-radius: 5px;
+	box-shadow: inset 0 0 4px rgba(0,0,0,0.5);
+	background-color: rgba(0,0,0,0.1);
+	background-size: 50px;
+	background-repeat: no-repeat;
+	text-indent: 60px;
+	font-size: 17px;
+	border: 1px solid #fff; 
+}
+.text:nth-child(3){
+	width: 200px;
+	margin-top: 10px;;
+}
+.text:nth-child(4){
+	width: 100px;
+}
+input::-webkit-input-placeholder {
+	font-family: STXingkai;
+	color:#fff;
+}
+input[type="submit"]{
+	display: block;
+	width: 300px;
+	height: 60px;
+	background: url('../images/but.jpg');
+	background-size: 100% 100%;
+	background-repeat: no-repeat;
+	border-radius: 5px;
+	margin-top: 20px;
+	cursor: pointer;
+	margin: 20px auto;
+	transition: 0.5s;
+}
+input[type="text"]:focus{
+	border: 1px solid #bddd22;
+}
+input[type="password"]:focus{
+	border: 1px solid #bddd22;
+}
+input[type="submit"]:hover{
+	border: 2px solid #88ada6;
+	box-shadow: inset 0 0 30px rgba(0,0,0,0.4);
+}
+/* 提示语，注册 修改密码 */
+.tip{
+	position: relative;
+}
+.tip p a{
+	color: #eacd76;
+	font-size: 18px;
+	float: left;
+	text-decoration: none;
+}
+.tip .left{
+	position: absolute;
+	top: -3px;
+	left: 20px;
+}
+.top .right{
+	position: absolute;
+	top: -3px;
+	right: 20px;
+}
+.tip p a:hover{
+	text-decoration: underline;
+}
+/* 登录模块底部 */
+.bottom{
+	text-align: center;
+	vertical-align: middle;
+}
+.words{
+	display: inline-block;
+	font-size: 22px;
+	font-weight: bold;
+	color: #eacd76;
+	font-family: 楷体;
+}
+.bottom a{
+	display: inline-block;
+	vertical-align: middle;
+}
+.bottom img{
+	width: 40px;
+	height: 40px;
+	margin: 5px;
+	border-radius: 50%;
+	box-shadow: 0 0 10px rgba(0,0,0,0.7);
+}
+/* 侧边栏 */
+.switchBar{
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 150px;
+	height: 100%;
+	background-color:rgba(248,248,255,0.3);
+	transition: 0.7s;
+	transform: translateX(-150px);
+}
+.switchBar .on{
+	transform: translateX(0px);
+}
+.switchBar ul{
+	list-style: none;
+}
+.list{
+	display: block;
+	width: 130px;
+	height: 100px;
+	background-image:url("../images/themes/1.jpg");
+	background-size: 100% 100%;
+	border:1px solid #000;
+	border-radius: 20px;
+	cursor: pointer;
+	margin: 0 auto 10px auto;
+	box-shadow: inset 0 0 10px rgba(0,0,0,0.5);
+	opacity: 0.7;
+	transition: 0.7s;
+}
+.list:nth-child(2){
+	background-image: url("../images/themes/2.jpg");
+}
+.list:nth-child(3){
+	background-image: url("../images/themes/3.jpg");
+}
+.list:nth-child(4){
+	background-image: url("../images/themes/4.jpg");
+}
+.list:hover{
+	transform: scale(1.1);
+	opacity: 1;
+}
