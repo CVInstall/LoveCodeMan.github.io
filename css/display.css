@@ -14,7 +14,7 @@ html,body{
 	height: 15%;
 	border-bottom: 2px solid #8e6a55;
 	background: #262b39;
-	overflow: hidden;
+	/* overflow: hidden; */
 }
 /* 商标logo */
 .header .logo{
